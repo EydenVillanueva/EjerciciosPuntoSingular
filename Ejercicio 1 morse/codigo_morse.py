@@ -107,23 +107,25 @@ def morse(entrada, flag):
 
 #Método principal de ejecución
 def inicio():
-    
-    #Ciclo infinito hasta que el usuario presione salir
-    while True:
-        #obtenemos la seleción del usuario y la convertimos a entero
-        eleccion = int(input(menu))
-                
-        if eleccion == 1:
-            limpiar()
-            #Imprimimos el resultado a la vez que llamamos a nuestra función morse
-            print("\n\n" + morse(input("\n Texto >"), True))
-        if eleccion == 2:
-            limpiar()
-            #Imprimimos el resultado a la vez que llamamos a nuestra función morse
-            print("\n\n" + morse(input("\n Morse >"), False))
-        if eleccion == 3:
-            salir()
+    try:
+        #Ciclo infinito hasta que el usuario presione salir
+        while True:
+            #obtenemos la seleción del usuario y la convertimos a entero
+            eleccion = int(input(menu))
+                    
+            if eleccion == 1:
+                limpiar()
+                #Imprimimos el resultado a la vez que llamamos a nuestra función morse
+                print("\n\n" + morse(input("\n Texto >"), True))
+            if eleccion == 2:
+                limpiar()
+                #Imprimimos el resultado a la vez que llamamos a nuestra función morse
+                print("\n\n" + morse(input("\n Morse >"), False))
+            if eleccion == 3:
+                salir()
+        except:
+            print("Algo ocurrió..")
 
 
-    
-inicio()
+if __name__ == "__main__":
+    inicio()
