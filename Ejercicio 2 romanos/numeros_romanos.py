@@ -37,7 +37,7 @@ menu = '''
 '''
 Métodos
 '''
-
+#Limpia el cli para una mejor experiencia de navegación
 def limpiar():
     #Identificamos el S.O en el que estamos
     if platform.system() == 'Windows':
