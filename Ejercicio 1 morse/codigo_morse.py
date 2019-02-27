@@ -123,8 +123,8 @@ def inicio():
                 print("\n\n" + morse(input("\n Morse >"), False))
             if eleccion == 3:
                 salir()
-        except:
-            print("Algo ocurrió..")
+    except:
+        print("Algo ocurrió..")
 
 
 if __name__ == "__main__":
